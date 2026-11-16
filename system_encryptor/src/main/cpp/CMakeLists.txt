@@ -31,6 +31,9 @@ FetchContent_Declare(
 
 set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
 
+# Android production builds only need BoringSSL libraries; skip its host-side tests/benchmarks.
+set(BUILD_TESTING OFF CACHE BOOL "Disable BoringSSL tests and benchmarks" FORCE)
+
 FetchContent_MakeAvailable(boringssl)
 
 add_library(${CMAKE_PROJECT_NAME} SHARED
