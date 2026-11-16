@@ -149,6 +149,8 @@ dependencies {
 
     // Testing
     testImplementation(libs.junit)
+    // Provide a real org.json implementation for local JVM unit tests (Android stubs throw at runtime).
+    testImplementation("org.json:json:20240303")
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
