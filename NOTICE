@@ -1,0 +1,20 @@
+NeuroVerse - Offline Android Copilot with Plugin System
+Copyright 2025 Siddhesh Sonar and NeuroVerse Contributors
+
+This product includes software developed by the NeuroVerse contributors.
+Trademarks: “NeuroVerse” and the NeuroVerse logo are trademarks of their respective owner(s).
+
+
+MCP integration provenance
+==========================
+
+The Android MCP integration is an original implementation for ToolNeuron. It
+was informed by the public workflows and documentation of the following
+MIT-licensed projects, which are not bundled as runtime dependencies:
+
+* REA (morluto/rea), Copyright (c) 2026 morluto
+* ECC (affaan-m/ECC), Copyright (c) 2026 Affaan Mustafa
+* Replica Skill (Jakeschincariol/replica-skill), Copyright (c) 2026 Jake Schincariol
+
+Their source licenses remain with their respective projects. ToolNeuron source
+continues to be distributed under the Apache License 2.0 in LICENSE.
