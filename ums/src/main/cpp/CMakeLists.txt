@@ -28,6 +28,9 @@ FetchContent_Declare(
     GIT_REPOSITORY https://boringssl.googlesource.com/boringssl
     GIT_TAG 617634bc015344093f5ea0b0a5b653c924cfa20d
 )
+# Android production builds only need BoringSSL libraries; skip its host-side tests/benchmarks.
+set(BUILD_TESTING OFF CACHE BOOL "Disable BoringSSL tests and benchmarks" FORCE)
+
 FetchContent_MakeAvailable(boringssl)
 
 # LZ4 — fast compression for per-record storage
