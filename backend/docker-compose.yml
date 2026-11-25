@@ -1,0 +1,26 @@
+services:
+  api:
+    build: .
+    environment:
+      DATABASE_URL: postgresql+asyncpg://ultra:ultra@postgres:5432/ultra
+      REDIS_URL: redis://redis:6379/0
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - redis
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ultra
+      POSTGRES_PASSWORD: ultra
+      POSTGRES_DB: ultra
+    volumes:
+      - ultra-postgres:/var/lib/postgresql/data
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - ultra-redis:/data
+volumes:
+  ultra-postgres:
+  ultra-redis:
